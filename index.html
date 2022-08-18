@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>App Clima</title>
+</head>
+<body>
+    <main>
+        <section class="section-date">
+            <div class="date">
+                <h1 id="day" class="day"></h1>
+                <p id="number-day" class="number-day"></p>
+                <p id="month" class="month"></p>
+            </div>
+            <div class="ubication">
+                <div class="icon-ubication"></div>
+                <p id="city" class="city"></p>
+                <p id="country" class="country"></p>
+            </div>
+        </section>
+        <section class="section-meteoro">
+            <div class="title-climate">
+                <h2 id="title-meteo" class="t-meteorologic"></h2>
+                <p id="desc-meteo" class="description-mete"></p>
+            </div>
+            <figure>
+                <div id="image-desc" class="image-desc"></div>
+                <p id="temp" class="temp"></p>
+            </figure>
+        </section>
+        <section class="section-temp">
+            <div class="temp-max">
+                <img src="assets/icons/temperature-max.svg" alt="" class="icon-temp icon-temp1">
+                <h3 class="title-temp">Temperatura min.</h3>
+                <p id="date-temp-min" class="date-temp"></p>
+            </div>
+            <div class="temp-min">
+                <img src="assets/icons/temperature-min.svg" alt="" class="icon-temp icon-temp2">
+                <h3 class="title-temp">Temperatura max.</h3>
+                <p id="date-temp-max" class="date-temp"></p>
+            </div>
+        </section>
+        <section class="section-hume-nubo">
+            <div class="humedity">
+                <img src="assets/icons/humidity.svg" alt="" class="icon-hume">
+                <h3 class="title-hume">Humedad</h3>
+                <p id="humedity" class="date-hume"></p>
+            </div>
+            <div class="nubo">
+                <img src="assets/icons/nubo.svg" alt="" class="icon-nubo">
+                <h3 class="title-nubo">Nubosidad</h3>
+                <p id="nubo" class="date-nubo"></p>
+            </div>
+        </section>
+        <section class="section-wind">
+            <img src="assets/icons/cloud-wind.svg" alt="" class="icon-wind">
+            <div class="wind-date">
+                <div class="wind-speed">
+                    <h3 class="title-wind">Vel. del viento</h3>
+                    <p id="speed-wind" class="date-wind"></p>
+                </div>
+                <div class="wind-deg">
+                    <h3 class="title-wind">Vel. del viento</h3>
+                    <p id="deg-wind" class="date-wind"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Code by Tomás Espinal</p>
+        <nav>
+           <a href="https://github.com/txmasito/app_clima.git" target="_blank">Github</a>
+           <a href="https://www.linkedin.com/in/tomas-espinal4/" target="_blank">Linkedin</a> 
+        </nav>
+        
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

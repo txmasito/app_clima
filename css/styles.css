@@ -1,0 +1,447 @@
+:root{
+    /* NIGHT MODE */
+    --color-blue-dark: #001233;
+    --color-blue-semi-dark: #001845;
+    --color-blue-icon-night: #0466C8;
+    --color-white: #ffffff;
+    /* DAY MODE */
+    --colo-black: #1E1E1E;
+    --color-blue-high: rgba(6, 190, 225, 0.2);
+    --color-blue-icon-day: #03256C;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Text-Regular.otf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/fonts/SF-Pro-Text-Bold.otf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-white);
+    font-family: 'SF Pro';
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    color: var(--colo-black);
+    position: relative;
+}
+
+/* SECTION DATE & UBICATION */
+
+main{
+    width: 90%;
+    max-width: 350px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: 70px, 230px, repeat(3, 200px);
+    grid-gap: 10px;
+}
+
+.section-date{
+    height: 70px;
+    background-color: var(--color-blue-high);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.day{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.day::first-letter{
+    text-transform: uppercase;
+}
+
+.month::first-letter{
+    text-transform: uppercase;
+}
+
+.icon-ubication{
+    width: 16px;
+    height: 16px;
+    background-image: url('/assets/icons/location.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.ubication{
+    display: flex;
+    column-gap: 5px;
+}
+
+.city{
+    font-size: 16px;
+}
+
+.country{
+    font-weight: 700;
+}
+
+/* SECTION METEOROLOGIC */
+
+.section-meteoro{
+    height: 230px;
+    background-color: var(--color-blue-high);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.t-meteorologic{
+    font-size: 16px;
+    text-align: center;
+}
+
+figure{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.image-desc{
+    width: 150px;
+    height: 150px;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.temp{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+/* SECTION TEMP */
+
+.section-temp{
+    height: 200px;
+    background-color: var(--color-blue-high);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.temp-max, .temp-min{
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.icon-temp{
+    width: 75px;
+    height: 75px;
+}
+
+.title-temp{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.date-temp{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* HUMEDITY & NUBOCITY */
+
+.section-hume-nubo{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.humedity, .nubo{
+    width: 170px;
+    height: 200px;
+    background-color: var(--color-blue-high);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    justify-content: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-hume, .icon-nubo{
+    width: 75px;
+    height: 75px;
+}
+
+.title-hume, .title-nubo{
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.date-hume, .date-nubo{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* SECTION WIND */
+
+.section-wind{
+    height: 200px;
+    background-color: var(--color-blue-high);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-wind{
+    width: 175px;
+    height: 175px;
+}
+
+.wind-date{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.title-wind{
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.date-wind{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.m-s{
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer{
+    position: absolute;
+    display: flex;
+    column-gap: 5px;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+footer > nav{
+    display: flex;
+    column-gap: 5px;
+}
+
+footer > nav > a{
+    color: var(--color-blue-icon-night);
+}
+
+@media  screen and (min-width: 980px) {
+
+    body{
+        height: 100vh;
+        align-items: center;
+    }
+
+    main{
+        min-width: 1000px;
+        max-height: 676px;
+        grid-template-columns: 280px repeat(3, 220px);
+        grid-template-rows: 80px repeat(2, 230px);
+        grid-template-areas: "ubication ubication ubication ubication"
+                             "temp temp-m-m temp-m-m hume-nubo"
+                             "temp wind wind hume-nubo";
+        grid-gap: 20px;
+        margin: 0;
+    }
+
+    .section-date{
+        grid-area: ubication;
+        height: 80px;
+    }
+
+    .section-meteoro{
+        grid-area: temp;
+        height: 480px;
+        row-gap: 20px;
+        justify-content: center;
+    }
+
+    .t-meteorologic{
+        font-size: 20px;
+    }
+
+    .description-mete{
+        font-size: 20px;
+    }
+
+    figure{
+        flex-direction: column;
+    }
+
+    .temp{
+        font-size: 120px;
+    }
+
+    .image-desc{
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-hume-nubo{
+        grid-area: hume-nubo;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .icon-hume, .icon-nubo{
+        width: 100px;
+        height: 100px;
+    }
+
+    .humedity, .nubo{
+        width: 220px;
+        height: 230px;
+    }
+
+    .title-nubo, .title-hume{
+        font-size: 20px;
+    }
+
+    .section-temp{
+        grid-area: temp-m-m;
+        height: 230px;
+    }
+
+    .temp-max, .temp-min{
+        width: auto;
+    }
+
+    .icon-temp{
+        width: 100px;
+        height: 100px;
+    }
+
+    .title-temp{
+        font-size: 20px;
+    }
+
+    .section-wind{
+        grid-area: wind;
+        height: 230px;
+    }
+
+    .icon-wind{
+        width: 175px;
+        height: 175px;
+    }
+
+    .title-wind{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+.clear-sky{
+    background-image: url('/assets/svg/clear-sky.svg');
+}
+
+.broken-clouds{
+    background-image: url('/assets/svg/broken-clouds.svg');
+}
+
+.few-clouds{
+    background-image: url('/assets/svg/few-clouds.svg');
+}
+
+.mist{
+    background-image: url('/assets/svg/mist.svg');
+}
+
+.rain{
+    background-image: url('/assets/svg/rain.svg');
+}
+
+.shower-rain{
+    background-image: url('/assets/svg/shower-rain.svg');
+}
+
+.scattered-clouds{
+    background-image: url('/assets/svg/scattered.svg');
+}
+
+.snow{
+    background-image: url('/assets/svg/snow.svg');
+}
+
+.thundertorm{
+    background-image: url('/assets/svg/thundertorm.svg');
+}
+
+/* NIGHT ICONS */
+
+.clear-sky-night{
+    background-image: url('/assets/svg/clear-sky-night.svg');
+}
+
+.few-clouds-night{
+    background-image: url('/assets/svg/few-clouds-night.svg');
+}
+
+.mist-night{
+    background-image: url('/assets/svg/mist-night.svg');
+}
+
+.rain-night{
+    background-image: url('/assets/svg/rain-night.svg');
+}
