@@ -72,40 +72,50 @@ window.addEventListener('load', () => {
                 speedWind.appendChild(span);
                 degWind.textContent = `${res.data.wind.deg}°`;
                 
-                //CHANGE ICON DESCRIPTION
-                if(descMeteo.textContent == 'clear sky' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
+                //CHANGE ICON TITLE
+                
+                if(titleMeteo.textContent == 'Clear sky' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
                     imageDesc.classList.add('clear-sky');
-                } else if(descMeteo.textContent == 'clear sky' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
+                }
+                if(titleMeteo.textContent == 'Clear sky' && (parseInt(hour) >= 19 || parseInt(hour) <= 7)){
                     imageDesc.classList.add('clear-sky-night');
+                    console.log('hola');
                 }
         
-                if(descMeteo.textContent == 'few clouds' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
+                if(titleMeteo.textContent == 'Clouds' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
                     imageDesc.classList.add('few-clouds');
-                } else if(descMeteo.textContent == 'few clouds' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
+                }
+                if(titleMeteo.textContent == 'Clouds' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
                     imageDesc.classList.add('few-clouds-night');
                 }
         
-                if(descMeteo.textContent == 'mist' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
+                if((titleMeteo.textContent == 'Mist' || titleMeteo.textContent == 'Smoke' || titleMeteo.textContent == 'Haze' || titleMeteo.textContent == 'Dust' || titleMeteo.textContent == 'Fog' || titleMeteo.textContent == 'Sand' || titleMeteo.textContent == 'Ash' || titleMeteo.textContent == 'Squall' || titleMeteo.textContent == 'Tornado') && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
                     imageDesc.classList.add('mist');
-                } else if(descMeteo.textContent == 'mist' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
+                }
+                if((titleMeteo.textContent == 'Mist' || titleMeteo.textContent == 'Smoke' || titleMeteo.textContent == 'Haze' || titleMeteo.textContent == 'Dust' || titleMeteo.textContent == 'Fog' || titleMeteo.textContent == 'Sand' || titleMeteo.textContent == 'Ash' || titleMeteo.textContent == 'Squall' || titleMeteo.textContent == 'Tornado') && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
                     imageDesc.classList.add('mist-night');
                 }
         
-                if(descMeteo.textContent == 'rain' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
+                if(titleMeteo.textContent == 'Rain' && (parseInt(hour) >= 7 || parseInt(hour) <= 19)){
                     imageDesc.classList.add('rain');
-                } else if(descMeteo.textContent == 'rain' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
+                }
+                if(titleMeteo.textContent == 'Rain' && (parseInt(hour) >= 19 || parseInt(hour) <= 6)){
                     imageDesc.classList.add('rain-night');
                 }
         
-                if(descMeteo.textContent == 'broken clouds'){
+                if(titleMeteo.textContent == 'Broken clouds'){
                     imageDesc.classList.add('broken-clouds');
-                }else if(descMeteo.textContent == 'shower rain'){
+                }
+                if(titleMeteo.textContent == 'Drizzle'){
                     imageDesc.classList.add('shower-rain');
-                }else if(descMeteo.textContent == 'scattered clouds'){
+                }
+                if(titleMeteo.textContent == 'Scattered clouds'){
                     imageDesc.classList.add('scattered-clouds');
-                }else if(descMeteo.textContent == 'snow'){
+                }
+                if(titleMeteo.textContent == 'Snow'){
                     imageDesc.classList.add('snow');
-                }else if(descMeteo.textContent == 'thundertorm'){
+                }
+                if(titleMeteo.textContent == 'Thunderstorm'){
                     imageDesc.classList.add('thundertorm');
                 }
                 // NIGHT MODE

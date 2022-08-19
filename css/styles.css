@@ -123,8 +123,16 @@ main{
     -o-border-radius: 15px;
 }
 
+.title-climate{
+    text-align: center;
+}
+
 .t-meteorologic{
     font-size: 16px;
+    text-align: center;
+}
+
+.desc-meteo{
     text-align: center;
 }
 
@@ -272,14 +280,14 @@ figure{
 footer{
     position: absolute;
     display: flex;
-    column-gap: 5px;
+    column-gap: 10px;
     bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 footer > nav{
     display: flex;
-    column-gap: 5px;
+    column-gap: 10px;
 }
 
 footer > nav > a{
